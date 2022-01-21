@@ -1,7 +1,8 @@
 #include<stdio.h>
 
 main(){
-    int x,y;
-    scanf("%d\n%d",&x,&y);
-    printf("%d",x+y);
+    int x,handshake;
+    scanf("%d",&x);
+    handshake = x*(x-1)/2;
+    printf("%d",handshake);
 }
