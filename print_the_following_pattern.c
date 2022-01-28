@@ -2,21 +2,24 @@
 
 int main(){
     
-    int n,i,j;
+    int n,i,k,j,l;
     scanf("%d",&n);
-    int temp = n-1;
+    
     for(i=0;i<n;i++){
-        for(j=0;j<n;j++){
-            if (i==j || j==temp){
-                printf("x");
-            }
-            else{
-                printf("0");
-            }
+        for(j=n-2;j>=i;j--){
+            printf(" ");
         }
-        temp-=1;
+        for(k=i;k>=1;k--){
+            printf("%d",k);
+            
+        }
+        for(l=0;l<=i;l++){
+            printf("%d",l);
+        }
+        
         printf("
 ");
+        
     }
     
     return 0;
