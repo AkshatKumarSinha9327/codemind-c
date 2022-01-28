@@ -2,21 +2,22 @@
 
 int main(){
     
-    int n,i,j,k,n_k,n_j;
+    int n,i,j;
     scanf("%d",&n);
-    n_k = n-1;
-    n_j = 1;
-    for (i=1;i<=n;i++){
-        for(k=n_k;k>=i;k--){
-            printf(" ");
+    int temp = n-1;
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            if (i==j || j==temp){
+                printf("x");
+            }
+            else{
+                printf("0");
+            }
         }
-        for (j=0;j<n_j;j++){
-            printf("%d",i);
-        }
-        n_j+=2;
+        temp-=1;
         printf("
 ");
     }
     
-    return 0 ;
+    return 0;
 }
